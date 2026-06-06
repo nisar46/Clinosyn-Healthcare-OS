@@ -1,19 +1,17 @@
-# Clinosyn Clinical OS 🧬
+# Clinosyn Healthcare OS 🧬
 
-> **🚧 STATUS: Active Development (Work In Progress)**
-> *This is an active codebase currently undergoing architectural evolution to integrate with OmniIngest Universal.*
+🚧 **STATUS: Active Development**  
+*This repository is undergoing architectural evolution to serve as the unified frontend intelligence module for the OmniIngest ABDM 2.0 framework.*
 
 ## Overview
-**Clinosyn** is a GenAI-driven clinical operating system designed to act as the intelligence top-layer over the OmniIngest pipeline. It provides a robust frontend and data interaction module, translating raw ingestion data into actionable, AI-driven insights.
+Clinosyn Healthcare OS is a GenAI-driven clinical operating terminal. It bridges the gap between raw data pipelines and actual hospital floor operations by converting standardized ABDM/EHR data into actionable, natural-language insights.
 
-## Core Objectives
-* **GenAI Intelligence:** Utilizing LLMs and RAG to process clinical and operational data.
-* **Seamless Integration:** Acting as the frontend OS for the underlying OmniIngest data pipelines.
-* **Modern Interface:** Built with Streamlit for rapid, interactive data visualization.
+## Core Architecture & Features
+* **ABDM Interface Layer:** Acts as the rapid Streamlit frontend for monitoring clinical remediation loops and amber-flagged verification errors.
+* **Local GenAI Intelligence:** Integrates semantic search and LangChain RAG pipelines to allow operators to converse safely with data.
+* **Zero-Cloud Privacy:** Built to run locally to align strictly with India's DPDP Act 2023 guidelines on healthcare data sovereignty.
 
 ## Tech Stack
-* Python (Streamlit)
-* LangChain / RAG Pipelines
-* LLM Integrations
-
-*(Full deployment instructions and pipeline diagrams will be added as Phase 2 development continues).*
+* **Frontend:** Python (Streamlit)
+* **Orchestration:** LangChain
+* **Data Processing:** Polars / Pandas
