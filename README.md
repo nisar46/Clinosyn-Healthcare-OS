@@ -1,73 +1,22 @@
-# Clinosyn Healthcare OS 🧬
-> **STATUS: ✅ Completed | Independent Research Project**
+# ⚕️ Clinosyn Healthcare OS
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
-![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)
-![Ollama](https://img.shields.io/badge/AI-Llama3%20%2F%20Ollama-black?style=for-the-badge)
-![SQLite](https://img.shields.io/badge/DB-SQLite-003B57?style=for-the-badge&logo=sqlite)
+**Status:** Completed | **Author:** Nisar Ahmed (Healthcare Functional Product Owner & Systems Analyst)
 
-## ⚡ Executive Summary
+## 📌 Executive Summary
+**Clinosyn Healthcare OS** is a centralized clinical operating terminal built to interface directly with OmniIngest data streams. It empowers hospital administrators and analysts to monitor real-time ingestion analytics, govern active patient PII masking arrays, and utilize an offline, privacy-first Generative AI terminal to query historic ABDM data using natural language.
 
-**Clinosyn Healthcare OS** is the clinical intelligence top-layer that sits above the [OmniIngest ABDM 2.0](https://github.com/nisar46/OmniIngest-Clinical-Engine) pipeline.
+## 🚀 Key Architectural Achievements
+* **Clinical Operating Terminal:** Engineered a streamlined, interactive Streamlit dashboard featuring live compliance monitoring and a validated **98.2% high-integrity FHIR pipeline processing success metric**.
+* **Privacy-First Offline RAG Pipeline:** Architected an entirely localized Natural Language-to-SQL (NL-to-SQL) engine. Powered by local Llama3 (via Ollama), it allows users to query sensitive patient vaults autonomously without ever sending PHI to cloud APIs.
+* **Native JSON Query Execution:** Designed native `json_extract()` querying algorithms that instantly translate conversational text prompts into optimized SQLite commands. This enables seamless contextual analysis directly against unstructured payload vaults while entirely eliminating cloud API token fees and LLM hallucination risks.
 
-It transforms the clean, ABDM-compliant data stored in `omniingest_FINAL.db` into actionable, AI-driven clinical insights — all **offline and privacy-first**, with no cloud API fees or data leakage risks.
+## 🛠️ Technology Stack
+* **Languages & UI:** Python, Streamlit, SQLite
+* **Generative AI Engine:** Local Llama 3 (via Ollama), LangChain, Offline RAG, NL-to-SQL
+* **Healthcare Interoperability:** OmniIngest ABDM Middleware Integration, FHIR R5 Analytics
+* **Data Governance:** Real-time PII Tracking, Audit-Ready Dashboards
 
-> **Target User:** Doctors, Clinical Directors, and Hospital Executives.
-> **NOT for:** Administrative staff (they use OmniIngest).
-
----
-
-## 🏗️ Architecture Role
-
-```
-OmniIngest ABDM 2.0  ──saves──►  omniingest_FINAL.db  ──reads──►  Clinosyn Healthcare OS
-(Back-office / Admin)             (Shared SQLite Vault)             (Clinical Staff / Doctors)
-```
-
----
-
-## 💎 Key Features
-
-### 🧠 Offline GenAI — NL-to-SQL RAG Pipeline
-- Local **Llama3** (via Ollama) — zero cloud dependency, zero patient data leakage.
-- Converts natural language doctor queries into optimized SQLite commands.
-- Native `json_extract()` querying directly against unstructured `payload_vault` columns.
-
-### 📊 Clinical Analytics Terminal (Streamlit)
-- **Modular vs Monolithic Options:** Features a heavily modularized `app.py` for scalable deployment and a standalone `clinosyn_app.py` for isolated monolithic testing.
-- Real-time ingestion analytics and patient record monitoring.
-- Active PII masking arrays for privacy compliance.
-- **98.2%** high-integrity FHIR pipeline processing success metric.
-
-### 🔒 DPDP Governance Suite
-- Interactive Rule 8.3 cascading cryptographic **"Kill-Switch"**.
-- Instantly severs downstream data access for DPDP Act compliance.
-
----
-
-## 🛠️ Tech Stack
-
-| Component | Technology |
-|:---|:---|
-| **UI / Dashboard** | Streamlit |
-| **AI Engine** | LangChain + Llama3 (Ollama) |
-| **Database** | SQLite (`omniingest_FINAL.db`) |
-| **Query Layer** | NL-to-SQL RAG + `json_extract()` |
-| **Compliance** | DPDP Act 2023 Rule 8.3 |
-
----
-
-## 🔗 Companion Project
-This project is part of the **Healthcare Suite** and is designed to work exclusively with:
-👉 [OmniIngest Clinical Data Engine (ABDM 2.0)](https://github.com/nisar46/OmniIngest-Clinical-Engine)
-
----
-
-## 👨‍💻 Author
-**Nisar Ahmed** — Clinical Data Analyst | Healthcare Data Engineering
-[LinkedIn](https://linkedin.com/in/nisar-ahmed-8440763a3) · [Portfolio](https://nisar46.github.io/portfolio)
-
-> *"Doctors should query data in plain English. Clinosyn makes that real."*
-
----
-*© 2026 Nisar Ahmed. Licensed under MIT.*
+## 📊 Performance Metrics
+* **Pipeline Success Rate:** 98.2% verified high-integrity FHIR data processing.
+* **Security Rating:** 100% offline querying (Zero external cloud API calls, ensuring DPDP compliance).
+* **Cost Efficiency:** $0 incurred in external LLM token processing fees.
