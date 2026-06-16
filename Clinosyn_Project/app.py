@@ -46,6 +46,11 @@ page = st.sidebar.radio(
 )
 
 st.sidebar.markdown("---")
+# Dynamic Ollama model selection input
+ollama_model = st.sidebar.text_input("🤖 Ollama Model ID", value="llama3")
+st.session_state['ollama_model'] = ollama_model
+
+st.sidebar.markdown("---")
 
 # Live record count in sidebar
 if st.sidebar.button("🔄 Sync Live Data"):
